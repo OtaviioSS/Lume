@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_editar_perfil"
+    tools:context=".view.Activity_EditarPerfil">
+
+
+    <TextView
+        android:id="@+id/txtTituloEditPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/edite_seu_perfil"
+        android:textColor="#ffffff"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@id/btnselcfotoEditPerfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/btnselcfotoEditPerfil"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/btnredondo"
+        android:elevation="20dp"
+        android:src="@drawable/ic_person_black_24dp"
+        app:layout_constraintBottom_toTopOf="@+id/barNomeEditPerfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTituloEditPerfil"
+
+        />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nome"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/barNomeEditPerfil"
+        app:layout_constraintStart_toStartOf="@+id/barNomeEditPerfil" />
+
+    <EditText
+        android:id="@+id/barNomeEditPerfil"
+        android:layout_width="145dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bartext"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/digite_seu_nome_completo"
+        android:inputType="text"
+        android:paddingStart="8dp"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/barInstituicaoEditPerfil"
+        app:layout_constraintEnd_toStartOf="@+id/barSobreNomeEditPerfil"
+        app:layout_constraintStart_toStartOf="@id/barInstituicaoEditPerfil"
+        app:layout_constraintTop_toBottomOf="@+id/btnselcfotoEditPerfil"
+        tools:ignore="Autofill,RtlSymmetry" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sobrenome"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/barSobreNomeEditPerfil"
+        app:layout_constraintStart_toStartOf="@id/barSobreNomeEditPerfil" />
+
+    <EditText
+        android:id="@+id/barSobreNomeEditPerfil"
+        android:layout_width="145dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bartext"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/sobrenome"
+        android:inputType="textPersonName"
+        android:paddingStart="8dp"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/barNomeEditPerfil"
+        app:layout_constraintEnd_toEndOf="@id/barInstituicaoEditPerfil"
+        app:layout_constraintStart_toEndOf="@+id/barNomeEditPerfil"
+        app:layout_constraintTop_toTopOf="@id/barNomeEditPerfil"
+        tools:ignore="Autofill,RtlSymmetry" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/seu_colegio_universidade"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/barInstituicaoEditPerfil"
+        app:layout_constraintStart_toStartOf="@+id/barInstituicaoEditPerfil" />
+
+    <EditText
+        android:id="@+id/barInstituicaoEditPerfil"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bartext"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/colegio_ou_universidade"
+        android:paddingStart="8dp"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@id/barDataEditPerfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barSobreNomeEditPerfil"
+        tools:ignore="Autofill,RtlSymmetry,TextFields" />
+
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/data_de_nascimento"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/barDataEditPerfil"
+        app:layout_constraintStart_toStartOf="@+id/barDataEditPerfil" />
+
+    <com.santalu.maskedittext.MaskEditText
+        android:id="@+id/barDataEditPerfil"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bartext"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/_00_00_0000"
+        android:inputType="date"
+        android:padding="8dp"
+        android:paddingStart="8dp"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/barCurso"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barInstituicaoEditPerfil"
+        tools:ignore="Autofill,RtlSymmetry"
+        app:met_mask="##/##/####"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/curso"
+        app:layout_constraintBottom_toTopOf="@id/barCurso"
+        app:layout_constraintStart_toStartOf="@id/barCurso"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:textSize="18sp"/>
+
+    <EditText
+        android:id="@+id/barCurso"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bartext"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/seu_curso"
+        android:inputType="text"
+        android:padding="8dp"
+        android:paddingStart="8dp"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnConcluir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barDataEditPerfil"
+        tools:ignore="Autofill,RtlSymmetry" />
+
+
+    <ImageView
+        android:id="@+id/mais"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="15dp"
+        android:contentDescription="@string/mais"
+        android:src="@drawable/ic_more_horiz_black_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/deletarConta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bartext"
+        android:padding="8dp"
+        android:text="@string/deletar_minha_conta"
+        android:textColor="#ff5522"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/mais"
+        app:layout_constraintEnd_toStartOf="@id/mais"
+        app:layout_constraintTop_toBottomOf="@id/mais" />
+
+
+    <Button
+        android:id="@+id/btnConcluir"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:background="@drawable/btncontinuar"
+        android:backgroundTint="#ffffff"
+        android:fontFamily="@font/roboto"
+        android:text="@string/continuar"
+        android:textAppearance="@style/TextLabel"
+        android:textColor="#32407B"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnCancelar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barCurso" />
+
+    <TextView
+        android:id="@+id/btnCancelar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/roboto"
+        android:lineSpacingExtra="8sp"
+        android:linksClickable="false"
+        android:singleLine="true"
+        android:text="@string/cancelar"
+        android:textColor="#ffffff"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnConcluir" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

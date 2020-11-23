@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".view.Activity_EditarIdeia">
+
+    <TextView
+        android:id="@+id/txtTituloEditarIdeia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/editar_publica_o"
+        android:textSize="30sp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/barTituloEditIdeia"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/titulo"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/barTituloEditIdeia"
+        app:layout_constraintStart_toStartOf="@id/barTituloEditIdeia" />
+    <EditText
+        android:id="@+id/barTituloEditIdeia"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bartext_addideia"
+        android:enabled="false"
+        android:paddingStart="8dp"
+        android:text="@string/titulo"
+        app:layout_constraintBottom_toTopOf="@+id/barDescricaoIdeiaEditIdeia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEditIdeia"
+        tools:ignore="Autofill,LabelFor,RtlSymmetry,TextFields" />
+
+
+    <ImageView
+        android:id="@+id/imgIdeiaEditIdeia"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:background="@drawable/bartext_addideia"
+        android:contentDescription="@string/imagem_da_ideia"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@id/barEmailEditIdeia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barDescricaoIdeiaEditIdeia" />
+
+
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start|top"
+        android:text="@string/descri_o"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/barDescricaoIdeiaEditIdeia"
+        app:layout_constraintStart_toStartOf="@id/barDescricaoIdeiaEditIdeia" />
+
+    <EditText
+        android:id="@+id/barDescricaoIdeiaEditIdeia"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bartext_addideia"
+        android:enabled="false"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:paddingStart="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/imgIdeiaEditIdeia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barTituloEditIdeia"
+        tools:ignore="Autofill,LabelFor,RtlSymmetry" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/barEmailEditIdeia"
+        app:layout_constraintStart_toStartOf="@id/barEmailEditIdeia" />
+
+    <EditText
+        android:id="@+id/barEmailEditIdeia"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bartext_addideia"
+        android:enabled="false"
+        android:inputType="textEmailAddress"
+        android:paddingStart="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/barWhastAppEditIdeia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgIdeiaEditIdeia"
+        tools:ignore="Autofill,LabelFor,RtlSymmetry" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/whastapp"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/barWhastAppEditIdeia"
+        app:layout_constraintStart_toStartOf="@id/barWhastAppEditIdeia" />
+
+    <EditText
+        android:id="@+id/barWhastAppEditIdeia"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bartext_addideia"
+        android:enabled="false"
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/btnConcluirEditIdeia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barEmailEditIdeia"
+        tools:ignore="Autofill,LabelFor" />
+
+    <TextView
+        android:id="@+id/btnEditIdeia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/editar"
+        android:text="@string/editar"
+        app:layout_constraintEnd_toEndOf="@id/txtTituloEditarIdeia"
+        app:layout_constraintStart_toStartOf="@id/txtTituloEditarIdeia"
+        app:layout_constraintTop_toBottomOf="@id/txtTituloEditarIdeia"
+        android:textStyle="bold"
+        android:textColor="#46B5D1"
+        android:textSize="18sp"
+      />
+
+    <Button
+        android:id="@+id/btnConcluirEditIdeia"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bartext_addideia"
+        android:contentDescription="@string/salvar_edi_o"
+        android:enabled="false"
+        android:src="@drawable/ic_check_black_24dp"
+        android:text="Salvar Alteração"
+        android:textAppearance="@style/TextLabel"
+        android:textColor="#555555"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnCancelarEditarIdeia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barWhastAppEditIdeia" />
+
+
+    <Button
+        android:id="@+id/btnCancelarEditarIdeia"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:background="@drawable/btn_enviar_msg_chat"
+        android:contentDescription="@string/cancelar_edi_o"
+        android:enabled="false"
+        android:visibility="invisible"
+        android:text="Cancelar"
+        android:textAppearance="@style/TextLabel"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnConcluirEditIdeia"
+        tools:ignore="PrivateResource" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

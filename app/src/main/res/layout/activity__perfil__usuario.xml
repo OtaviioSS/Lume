@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.imcub.lume.view.Activity_Perfil_Usuario">
+
+
+    <ImageView
+        android:id="@+id/vetorperfil1"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/bola"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/capa" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgUsuarioPerfil"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/btnredondo"
+        android:elevation="20dp"
+        android:src="@drawable/ic_person_black_24dp"
+        app:layout_constraintBottom_toTopOf="@id/txtNomeUsuarioPerfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+
+
+
+    <ImageButton
+        android:id="@+id/addImg"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/btnbg"
+        android:elevation="50dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_photo_camera_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@id/imgUsuarioPerfil"
+        app:layout_constraintEnd_toEndOf="@id/imgUsuarioPerfil"
+        android:contentDescription="@string/alterar_foto_de_perfil" />
+
+    <TextView
+        android:id="@+id/txtNomeUsuarioPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="50dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/nome_de_usuario"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/txtminhasIdeias"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgUsuarioPerfil"
+
+        />
+
+    <TextView
+        android:id="@+id/iconEditPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/editar_perfil"
+        android:textColor="#46B5D1"
+        android:fontFamily="@font/roboto"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/txtNomeUsuarioPerfil"
+        app:layout_constraintStart_toStartOf="@id/txtNomeUsuarioPerfil"
+        app:layout_constraintTop_toBottomOf="@id/txtNomeUsuarioPerfil" />
+
+
+    <TextView
+        android:id="@+id/txtminhasIdeias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/minhas_ideias"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/recyclerIdeiasPerfil"
+        app:layout_constraintEnd_toEndOf="@id/recyclerIdeiasPerfil"
+        app:layout_constraintStart_toStartOf="@id/recyclerIdeiasPerfil" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerIdeiasPerfil"
+        android:layout_width="330dp"
+        android:layout_height="130dp"
+        android:background="@drawable/bgblack"
+        android:paddingHorizontal="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnaddFotos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iconEditPerfil"
+        tools:listitem="@layout/activity__perfil__item__view" />
+
+    <LinearLayout
+        android:id="@+id/btnaddFotos"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerIdeiasPerfil">
+
+        <Button
+            android:id="@+id/btnSaveImg"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="50dp"
+            android:background="@drawable/btnbg"
+            android:drawableStart="@drawable/ic_check_black_24dp"
+            android:paddingStart="26dp"
+            android:textColor="#ffffff"
+            tools:ignore="ButtonStyle,RtlSymmetry" />
+
+        <Button
+            android:id="@+id/btncancel"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="110dp"
+            android:background="@drawable/btnbg"
+            android:drawableStart="@drawable/ic_clear_black_24dp"
+            android:paddingStart="26dp"
+            android:textColor="#ffffff"
+            tools:ignore="ButtonStyle,PrivateResource,RtlSymmetry" />
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

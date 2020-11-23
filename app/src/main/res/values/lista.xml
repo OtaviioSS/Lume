@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="Categorias">
+        <item>Todas Categorias</item>
+        <item>Administração</item>
+        <item>Biologia e Saúde</item>
+        <item>Tecnologia</item>
+        <item>Eletro/Eletrônica</item>
+        <item>Diversão</item>
+        <item>Comunicação</item>
+        <item>Mobilidade</item>
+        <item>Sustentabilidade</item>
+        <item>Cultural</item>
+        <item>Esportes</item>
+        <item>Jogos</item>
+        <item>Humanas e Sociais</item>
+        <item>Indústria</item>
+        <item>Construção</item>
+    </string-array>
+</resources>

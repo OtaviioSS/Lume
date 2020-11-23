@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_tela_login"
+    tools:context="com.imcub.lume.view.MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imgLogoLogin"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="60dp"
+        android:contentDescription="@string/lume"
+        android:src="@drawable/lume"
+        app:layout_constraintBottom_toTopOf="@+id/barEmailLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:text="@string/email"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/barEmailLogin"
+        app:layout_constraintStart_toStartOf="@+id/barEmailLogin" />
+
+    <EditText
+        android:id="@+id/barEmailLogin"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:elevation="30dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/bartextlogin"
+        android:drawableStart="@drawable/ic_email_black_24dp"
+        android:drawablePadding="8dp"
+        android:drawableTint="#7b7b7b"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:textColor="#7b7b7b"
+        android:textColorHint="#7b7b7b"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/inputSenha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgLogoLogin"
+        tools:ignore="Autofill,LabelFor,UnusedAttribute" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:text="@string/senha"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/inputSenha"
+        app:layout_constraintStart_toStartOf="@+id/inputSenha" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:padding="0dp"
+        app:hintEnabled="false"
+        android:elevation="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogarLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barEmailLogin"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/barSenhaLogin"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/bartextlogin"
+            android:drawableStart="@drawable/ic_lock_black_24dp"
+            android:drawablePadding="8dp"
+            android:drawableTint="#7b7b7b"
+            android:fontFamily="@font/roboto"
+            android:hint="@string/senha"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColor="#7b7b7b"
+            android:textColorHint="#7b7b7b"
+            android:textSize="14sp"
+            tools:ignore="Autofill,LabelFor,UnusedAttribute" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/btnEsqueci"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:fontFamily="@font/roboto"
+        android:linksClickable="true"
+        android:minHeight="48dp"
+        android:text="@string/esqueci_a_senha"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/inputSenha"
+        app:layout_constraintTop_toBottomOf="@id/inputSenha" />
+
+    <Button
+        android:id="@+id/btnLogarLogin"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:background="@drawable/btnbg"
+        android:contentDescription="@string/entrar"
+        android:elevation="30dp"
+        android:fontFamily="@font/roboto"
+        android:padding="8dp"
+        android:text="@string/entrar"
+        android:textAppearance="@style/TextLabel"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnGoogleLogar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputSenha" />
+
+    <Button
+        android:id="@+id/btnGoogleLogar"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btngoogle"
+        android:drawableStart="@drawable/ic_icons8_google_logo"
+        android:fontFamily="@font/roboto"
+        android:paddingStart="10dp"
+        android:elevation="30dp"
+        android:visibility="gone"
+        android:text="@string/entrar_com_google"
+        app:layout_constraintBottom_toTopOf="@+id/btnCadEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogarLogin"
+        tools:ignore="RtlSymmetry" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:text="@string/ainda_n_o_tem_uma_conta"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+
+        app:layout_constraintBottom_toTopOf="@id/btnCadEmail"
+        app:layout_constraintEnd_toEndOf="@id/btnCadEmail"
+        app:layout_constraintStart_toStartOf="@id/btnCadEmail" />
+
+    <TextView
+        android:id="@+id/btnCadEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:elevation="50dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/registre_se"
+        android:textAlignment="center"
+        android:textColor="#46B5D1"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGoogleLogar" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

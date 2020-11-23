@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bacground_tela_cadastro"
+    tools:context="com.imcub.lume.view.Activity_AddUser">
+
+    <ImageView
+        android:id="@+id/imgLogoCadUser"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/lume"
+        android:src="@drawable/lume"
+        app:layout_constraintBottom_toTopOf="@id/txtTituloCadUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtTituloCadUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/crie_uma_conta"
+        android:textColor="#ffffff"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/barNomeCadUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgLogoCadUser" />
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/barNomeCadUser"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/bartext"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/digite_seu_nome_completo"
+        android:inputType="textPersonName"
+        android:paddingStart="8dp"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/barFaculdadeCadUser"
+        app:layout_constraintEnd_toStartOf="@+id/barSobreNomeCadUser"
+        app:layout_constraintStart_toStartOf="@id/barFaculdadeCadUser"
+        app:layout_constraintTop_toBottomOf="@+id/txtTituloCadUser"
+        tools:ignore="RtlSymmetry" />
+
+    <EditText
+        android:id="@+id/barFaculdadeCadUser"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bartext"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/digite_a_institui_o_que_voc_estuda"
+        android:paddingStart="8dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/barEmailCadUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barNomeCadUser"
+        tools:ignore="Autofill,RtlSymmetry"
+        android:inputType="text" />
+
+
+    <EditText
+        android:id="@+id/barSobreNomeCadUser"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bartext"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/sobrenome"
+        android:paddingStart="8dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/barNomeCadUser"
+        app:layout_constraintEnd_toEndOf="@id/barFaculdadeCadUser"
+        app:layout_constraintStart_toEndOf="@+id/barNomeCadUser"
+        app:layout_constraintTop_toTopOf="@+id/barNomeCadUser"
+        tools:ignore="Autofill,RtlSymmetry"
+        android:inputType="textPersonName" />
+
+
+    <EditText
+        android:id="@+id/barEmailCadUser"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="@drawable/bartext"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/email"
+        android:paddingStart="8dp"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/barSenhaCadUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barFaculdadeCadUser"
+        tools:ignore="Autofill,LabelFor,RtlSymmetry,TextFields" />
+
+
+    <EditText
+        android:id="@+id/barSenhaCadUser"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bartext"
+        android:ems="10"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/senha"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:paddingStart="8dp"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnConcluirCadUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barEmailCadUser"
+        tools:ignore="Autofill,LabelFor,RtlSymmetry" />
+
+
+    <Button
+        android:id="@+id/btnConcluirCadUser"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/btnbg"
+        android:fontFamily="@font/roboto"
+        android:padding="8dp"
+        android:src="@drawable/ic_check_black_24dp"
+        android:text="@string/continuar"
+        android:textSize="18sp"
+        android:textAppearance="@style/TextLabel"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btnGoogleCadUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barSenhaCadUser" />
+
+    <Button
+        android:id="@+id/btnGoogleCadUser"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:background="@drawable/btngoogle"
+        android:drawableStart="@drawable/ic_icons8_google_logo"
+        android:fontFamily="@font/roboto"
+        android:paddingStart="8dp"
+        android:text="@string/entrar_com_google"
+        app:layout_constraintBottom_toTopOf="@+id/txtEntrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnConcluirCadUser"
+        tools:ignore="RtlSymmetry"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:text="@string/j_tem_uma_conta"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toTopOf="@+id/txtEntrar"
+        app:layout_constraintEnd_toEndOf="@+id/txtEntrar"
+        app:layout_constraintStart_toStartOf="@id/txtEntrar" />
+
+    <TextView
+        android:id="@+id/txtEntrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/entrar"
+        android:textColor="#46B5D1"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGoogleCadUser" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

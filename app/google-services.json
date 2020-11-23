@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "694935630085",
+    "firebase_url": "https://imcub-2b2a0.firebaseio.com",
+    "project_id": "imcub-2b2a0",
+    "storage_bucket": "imcub-2b2a0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:694935630085:android:ff54aa03a95ba2befac76c",
+        "android_client_info": {
+          "package_name": "com.imcub.lume_social_estudante_empreendedor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "694935630085-91bi5cs9p8jv8iicibuh7vs8v8lsn8sc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.imcub.lume_social_estudante_empreendedor",
+            "certificate_hash": "df7fdf6aff0bbe59cf6532220a6ec43b649828b2"
+          }
+        },
+        {
+          "client_id": "694935630085-kg6rqpel67djimt5kc2216r9uj6mmkrv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqVdHy-XKzYd_h8cnNTtLKVs80hS_-yCY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "694935630085-kg6rqpel67djimt5kc2216r9uj6mmkrv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

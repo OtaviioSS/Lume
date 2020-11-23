@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp">
+
+    <EditText
+        android:id="@+id/txtDenuncia"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/bartext"
+        android:hint="@string/escreva_aqui_sua_denuncia"
+        android:gravity="start|top"
+        android:padding="8dp"
+        tools:ignore="Autofill"
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/btnCancelarDenuncia"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/btnbg"
+        android:text="@string/cancelar"
+        android:textColor="#ffffff"
+        app:layout_constraintEnd_toStartOf="@id/btnConfirmarDenuncia"
+        app:layout_constraintTop_toTopOf="@id/btnConfirmarDenuncia"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/btnConfirmarDenuncia"
+        android:backgroundTint="#777777" />
+
+    <Button
+        android:layout_marginTop="8dp"
+        android:id="@+id/btnConfirmarDenuncia"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="@string/confirmar_denuncia"
+        android:background="@drawable/btnbg"
+        android:textColor="#ffffff"
+        app:layout_constraintTop_toBottomOf="@id/txtDenuncia"
+        app:layout_constraintEnd_toEndOf="@id/txtDenuncia"
+        android:layout_marginEnd="8dp"
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

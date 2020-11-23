@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.imcub.lume.view.Activity_Add_Ideia">
+
+
+    <TextView
+        android:id="@+id/tituloCriarIdeia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/publicar_nova_ideia"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtTituloAddIdeia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgUserAddNovaIdeia" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgUserAddNovaIdeia"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btnredondo"
+        android:src="@drawable/ic_person_black_24dp"
+        app:layout_constraintBottom_toTopOf="@+id/tituloCriarIdeia"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtNomeUsuarioAddIdeia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/nome_de_usuario"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imgUserAddNovaIdeia"
+        app:layout_constraintStart_toEndOf="@+id/imgUserAddNovaIdeia"
+        app:layout_constraintTop_toTopOf="@+id/imgUserAddNovaIdeia" />
+
+    <TextView
+        android:id="@+id/txtFaculdadeAddIdeia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/faculdade"
+        android:textColor="#888888"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/txtNomeUsuarioAddIdeia"
+        app:layout_constraintTop_toBottomOf="@+id/txtNomeUsuarioAddIdeia" />
+
+
+    <EditText
+        android:id="@+id/txtTituloAddIdeia"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bartext_addideia"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/titulo"
+        android:inputType="text"
+        android:padding="5dp"
+        android:paddingStart="10dp"
+        android:textColor="#000000"
+        android:textColorHint="#7b7b7b"
+        android:textColorLink="#7b7b7b"
+        android:textSize="16sp"
+        android:translationY="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtDescricaoAddIdeia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tituloCriarIdeia"
+        tools:ignore="Autofill,RtlSymmetry" />
+
+
+    <EditText
+        android:id="@+id/txtDescricaoAddIdeia"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bartext_addideia"
+        android:fontFamily="@font/roboto"
+        android:gravity="start|top"
+        android:hint="@string/escreva_um_breve_descri_o"
+        android:inputType="textMultiLine"
+        android:isScrollContainer="false"
+        android:padding="8dp"
+        android:textColor="#000000"
+        android:textColorLink="#F4F1F1"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/imgPublicacaoAddImagem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTituloAddIdeia"
+        tools:ignore="Autofill,LabelFor" />
+
+    <ImageView
+        android:id="@+id/imgPublicacaoAddImagem"
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:background="@drawable/bartext_addideia"
+        android:contentDescription="@string/imagem_da_publica_o"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@id/txtWhastAppAddIdeia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDescricaoAddIdeia" />
+
+    <ImageView
+        android:id="@+id/imgPublicacaoClique"
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/imagem_da_publica_o"
+        android:src="@drawable/ic_baseline_add_a_photo_24"
+        app:layout_constraintBottom_toTopOf="@id/txtWhastAppAddIdeia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDescricaoAddIdeia" />
+
+
+    <com.santalu.maskedittext.MaskEditText
+        android:id="@+id/txtWhastAppAddIdeia"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bartext_addideia"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/whatsapp"
+        android:imeOptions="actionNext"
+        android:inputType="phone"
+        android:paddingStart="10dp"
+        android:textAlignment="viewStart"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:translationY="2dp"
+        app:layout_constraintBottom_toTopOf="@id/spinnerCategoriaAddIdeia"
+        app:layout_constraintEnd_toStartOf="@id/txtEmailAddIdeia"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgPublicacaoAddImagem"
+        app:met_mask="(##)#####-####"
+        tools:ignore="RtlSymmetry" />
+
+
+    <EditText
+        android:id="@+id/txtEmailAddIdeia"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bartext_addideia"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/investimento"
+        android:inputType="number"
+        android:paddingStart="8dp"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtWhastAppAddIdeia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/txtWhastAppAddIdeia"
+        app:layout_constraintTop_toTopOf="@id/txtWhastAppAddIdeia"
+        tools:ignore="Autofill,RtlSymmetry" />
+
+    <Spinner
+        android:id="@+id/spinnerCategoriaAddIdeia"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bartext_addideia"
+        android:elevation="25dp"
+        android:entries="@array/Categorias"
+        android:paddingStart="8dp"
+        android:spinnerMode="dialog"
+        app:layout_constraintBottom_toTopOf="@id/btnConcluirAddIdeia"
+        app:layout_constraintEnd_toEndOf="@id/txtEmailAddIdeia"
+        app:layout_constraintStart_toStartOf="@id/txtWhastAppAddIdeia"
+        app:layout_constraintTop_toBottomOf="@id/txtWhastAppAddIdeia"
+        tools:ignore="RtlSymmetry" />
+
+    <Button
+        android:id="@+id/btnConcluirAddIdeia"
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/btnbg"
+        android:contentDescription="@string/todo"
+        android:fontFamily="@font/roboto"
+        android:text="@string/publicar"
+        android:textAppearance="@style/TextLabel"
+        android:textColor="#ffffff"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinnerCategoriaAddIdeia" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

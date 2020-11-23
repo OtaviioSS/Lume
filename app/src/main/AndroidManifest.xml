@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.imcub.lume">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:icon="@mipmap/ic_logolumeapp"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:roundIcon="@mipmap/ic_logolumeapp_round"
+        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+        <activity android:name="com.imcub.lume.view.Activity_Contato_ItemView" />
+        <activity android:name="com.imcub.lume.view.Activity_Lista_Contato" />
+        <activity android:name="com.imcub.lume.view.Activity_Chat" android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
+
+        <activity android:name="com.imcub.lume.view.Activity_EditarIdeia" />
+        <activity android:name="com.imcub.lume.view.Activity_introApp" />
+        <activity android:name="com.imcub.lume.view.Activity_EditarPerfil" />
+        <activity android:name="com.imcub.lume.view.Activity_Perfil_Item_View" />
+        <activity android:name="com.imcub.lume.view.Activity_item_view_1" />
+        <activity android:name="com.imcub.lume.view.Activity_RecuperarConta" />
+        <activity android:name="com.imcub.lume.view.Activity_Perfil_Usuario" />
+        <activity android:name="com.imcub.lume.view.Activity_AddUser" />
+        <activity android:name="com.imcub.lume.view.Activity_Inicio">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.imcub.lume.view.Activity_Add_Ideia" />
+        <activity android:name="com.imcub.lume.view.MainActivity" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

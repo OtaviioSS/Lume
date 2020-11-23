@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_recuperar_conta"
+    tools:context="com.imcub.lume.view.Activity_RecuperarConta">
+
+
+    <ImageView
+        android:id="@+id/iconRecuperarConta"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/ic_padlock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/titulorec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:text="@string/recuperar_conta"
+        android:textColor="#ffffff"
+        android:textSize="42sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtlinkRecuperarConta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iconRecuperarConta" />
+
+    <TextView
+        android:id="@+id/txtlinkRecuperarConta"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/linkRec"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/barEmailRecuperarConta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titulorec" />
+
+    <EditText
+        android:id="@+id/barEmailRecuperarConta"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bartext"
+        android:drawableStart="@drawable/ic_email_black_24dp"
+        android:drawablePadding="8dp"
+        android:drawableTint="#7b7b7b"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/email_imcub_com_br"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textColor="#000000"
+        android:textColorHint="#7b7b7b"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnEnviarRecuperarConta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtlinkRecuperarConta"
+        tools:ignore="Autofill,UnusedAttribute" />
+
+    <Button
+        android:id="@+id/btnEnviarRecuperarConta"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/btnbg"
+        android:contentDescription="@string/enviar_mensagem"
+        android:padding="8dp"
+        android:text="@string/enviar"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barEmailRecuperarConta" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
